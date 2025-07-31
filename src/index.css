@@ -2,41 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Demon Slayer Tic-Tac-Toe Design System
+Inspired by traditional Japanese aesthetics and anime themes
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Deep night sky background */
+    --background: 222 47% 8%;
+    --foreground: 35 100% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Game board card */
+    --card: 222 30% 12%;
+    --card-foreground: 35 100% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover elements */
+    --popover: 222 30% 12%;
+    --popover-foreground: 35 100% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Tanjiro's flame colors */
+    --primary: 15 88% 55%;
+    --primary-foreground: 222 47% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Subtle accent */
+    --secondary: 222 20% 18%;
+    --secondary-foreground: 35 100% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted elements */
+    --muted: 222 15% 15%;
+    --muted-foreground: 35 30% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Nezuko's gentle pink */
+    --accent: 330 50% 60%;
+    --accent-foreground: 222 47% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Akaza's destructive red */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 35 100% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders and inputs */
+    --border: 222 20% 20%;
+    --input: 222 20% 20%;
+    --ring: 15 88% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Game-specific variables */
+    --game-glow: 15 88% 55%;
+    --player-x: 15 88% 55%;
+    --ai-o: 0 85% 60%;
+    --board-cell: 222 25% 15%;
+    --board-hover: 222 30% 20%;
+    
+    /* Gradients */
+    --gradient-flame: linear-gradient(135deg, hsl(15 88% 55%), hsl(25 95% 65%));
+    --gradient-night: linear-gradient(180deg, hsl(222 47% 8%), hsl(222 35% 12%));
+    --gradient-victory: linear-gradient(135deg, hsl(15 88% 55%), hsl(330 50% 60%));
+    
+    /* Animations */
+    --transition-game: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --glow-shadow: 0 0 20px hsl(var(--game-glow) / 0.5);
 
     --sidebar-background: 0 0% 98%;
 

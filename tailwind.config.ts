@@ -52,6 +52,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Game-specific colors
+				'player-x': 'hsl(var(--player-x))',
+				'ai-o': 'hsl(var(--ai-o))',
+				'board-cell': 'hsl(var(--board-cell))',
+				'board-hover': 'hsl(var(--board-hover))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -67,6 +72,14 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			backgroundImage: {
+				'flame-gradient': 'var(--gradient-flame)',
+				'night-gradient': 'var(--gradient-night)',
+				'victory-gradient': 'var(--gradient-victory)',
+			},
+			boxShadow: {
+				'game-glow': 'var(--glow-shadow)',
 			},
 			keyframes: {
 				'accordion-down': {
@@ -84,11 +97,22 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'flame-flicker': {
+					'0%, 100%': { transform: 'scale(1)', opacity: '1' },
+					'50%': { transform: 'scale(1.05)', opacity: '0.9' },
+				},
+				'cell-pulse': {
+					'0%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.05)' },
+					'100%': { transform: 'scale(1)' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'flame-flicker': 'flame-flicker 2s ease-in-out infinite',
+				'cell-pulse': 'cell-pulse 0.3s ease-in-out',
 			}
 		}
 	},
