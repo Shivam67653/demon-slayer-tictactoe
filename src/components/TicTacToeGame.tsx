@@ -86,20 +86,7 @@ export default function TicTacToeGame() {
     setGameState("playing");
     setBoard(Array(9).fill(""));
     setWinner(null);
-    setIsAiTurn(symbol === "O"); // AI goes first if player chooses O
-    
-    if (symbol === "O") {
-      // AI makes first move
-      setTimeout(() => {
-        const aiMove = makeAiMove(Array(9).fill(""));
-        if (aiMove !== undefined) {
-          const newBoard = Array(9).fill("");
-          newBoard[aiMove] = "X";
-          setBoard(newBoard);
-        }
-        setIsAiTurn(false);
-      }, 800);
-    }
+    setIsAiTurn(false); // Player always starts first
     
     toast.info("A new battle begins!");
   };
@@ -196,7 +183,7 @@ export default function TicTacToeGame() {
                 </Button>
               </div>
               <p className="text-sm text-muted-foreground">
-                Choose X to go first, or O to let the demon start!
+                Choose your symbol and strike first!
               </p>
             </div>
           ) : gameState === "playing" ? (
